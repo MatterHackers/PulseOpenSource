@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/neo/Work/Yukon/Electronics/Heatbed MK52/24V_05d/Heatbed-MK52.sch</source>
+    <date>Fri 01 May 2020 04:55:20 PM PDT</date>
+    <tool>Eeschema 5.1.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Magnetic HeatBed MK52</title>
+        <company>PRUSA RESEARCH s.r.o</company>
+        <rev>0.5c</rev>
+        <date>2017-10-04</date>
+        <source>Heatbed-MK52.sch</source>
+        <comment number="1" value="#ok1hra"/>
+        <comment number="2" value="prusa3d.com"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P1">
+      <value>VCC</value>
+      <footprint>ok1hra:PCB-Large-pad</footprint>
+      <libsource lib="Heatbed-MK52-rescue" part="CONN_01X01" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58CBC184</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>GND</value>
+      <footprint>ok1hra:PCB-Large-pad</footprint>
+      <libsource lib="Heatbed-MK52-rescue" part="CONN_01X01" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58CBC258</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="Heatbed-MK52-rescue" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58CBC290</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED_ALT</value>
+      <footprint>LEDs:LED_0805</footprint>
+      <libsource lib="Heatbed-MK52-rescue" part="LED_ALT" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58CBC31B</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x02_Male</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43650-0200_1x02_P3.00mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EAC8DE9</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Thermistor</value>
+      <footprint>24V_05d:Thermistor</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5EAC9D2B</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x02_Male">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Heatbed-MK52-rescue" part="CONN_01X01">
+      <footprints>
+        <fp>Pin_Header_Straight_1X01</fp>
+        <fp>Pin_Header_Angled_1X01</fp>
+        <fp>Socket_Strip_Straight_1X01</fp>
+        <fp>Socket_Strip_Angled_1X01</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X01</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Heatbed-MK52-rescue" part="LED_ALT">
+      <footprints>
+        <fp>LED*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_ALT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Heatbed-MK52-rescue" part="R">
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
+    <library logical="Heatbed-MK52-rescue">
+      <uri>/home/neo/Work/Yukon/Electronics/Heatbed MK52/24V_05d/Heatbed-MK52-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(D1-Pad1)">
+      <node ref="P2" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="P1" pin="1"/>
+    </net>
+    <net code="2" name="Net-(J1-Pad2)">
+      <node ref="J1" pin="2"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="3" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="4" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="R1" pin="2"/>
+    </net>
+  </nets>
+</export>
